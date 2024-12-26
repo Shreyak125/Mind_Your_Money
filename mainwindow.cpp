@@ -1,11 +1,17 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include<QStackedWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->btnLogin, &QPushButton::clicked, this, &MainWindow::on_btnLogin_clicked);
+    connect(ui->btnSignup, &QPushButton::clicked, this, &MainWindow::on_btnSignup_clicked);
+    connect(ui->btnForgot, &QPushButton::clicked, this, &MainWindow::on_btnForgot_clicked);
+    connect(ui->btnPrev, &QPushButton::clicked, this, &MainWindow::on_btnPrev_clicked);
+
 }
 
 MainWindow::~MainWindow()
@@ -15,6 +21,25 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btnLogin_clicked()
 {
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_btnSignup_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_btnForgot_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_btnPrev_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 
 }
+
 

@@ -6,21 +6,308 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1051</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1021</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>0</y>
+        <width>271</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mind Your Money </string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>160</y>
+        <width>531</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtEmail"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="txtPassword"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="btnSignup">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>290</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SignUp</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnLogin">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>290</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnForgot">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>290</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ForgotPassword</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="btnSave1">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>430</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReset">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>430</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="formLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>671</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>First Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtFirstName"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Middle Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Last Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="txtLastName"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Email Address</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="txtEmail_2"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Phone Number</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="txtPhone"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="txtPassword_2"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="txtMiddle"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="btnPrev">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>430</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Previous</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>0</y>
+        <width>271</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Welcome User</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>290</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter Expense</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>290</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Edit Expense</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>290</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate Graph</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>26</height>
+     <width>1051</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
