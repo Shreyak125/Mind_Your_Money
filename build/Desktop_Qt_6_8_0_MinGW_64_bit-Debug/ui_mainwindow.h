@@ -10,11 +10,13 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
@@ -57,12 +59,23 @@ public:
     QLineEdit *txtPassword_2;
     QLineEdit *txtMiddle;
     QPushButton *btnPrev;
+    QWidget *page_4;
+    QWidget *formLayoutWidget_3;
+    QFormLayout *formLayout_3;
+    QLabel *label_11;
+    QLabel *label_12;
+    QLineEdit *txtFEmail;
+    QLineEdit *txtFPhone;
+    QPushButton *btnPrev_2;
+    QPushButton *btnNext;
     QWidget *page_3;
     QLabel *label_10;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *btnEnter;
+    QPushButton *btnEditexp;
+    QPushButton *btnGraph;
+    QPushButton *btnStats;
     QMenuBar *menubar;
+    QMenu *menuHome_Page;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -74,7 +87,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(20, 10, 1021, 651));
+        stackedWidget->setGeometry(QRect(10, 0, 1021, 651));
         page = new QWidget();
         page->setObjectName("page");
         label = new QLabel(page);
@@ -85,7 +98,7 @@ public:
         label->setFont(font);
         formLayoutWidget = new QWidget(page);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(270, 160, 531, 81));
+        formLayoutWidget->setGeometry(QRect(260, 180, 531, 81));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -201,6 +214,41 @@ public:
         btnPrev->setObjectName("btnPrev");
         btnPrev->setGeometry(QRect(480, 430, 83, 29));
         stackedWidget->addWidget(page_2);
+        page_4 = new QWidget();
+        page_4->setObjectName("page_4");
+        formLayoutWidget_3 = new QWidget(page_4);
+        formLayoutWidget_3->setObjectName("formLayoutWidget_3");
+        formLayoutWidget_3->setGeometry(QRect(120, 130, 771, 81));
+        formLayout_3 = new QFormLayout(formLayoutWidget_3);
+        formLayout_3->setObjectName("formLayout_3");
+        formLayout_3->setContentsMargins(0, 0, 0, 0);
+        label_11 = new QLabel(formLayoutWidget_3);
+        label_11->setObjectName("label_11");
+
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, label_11);
+
+        label_12 = new QLabel(formLayoutWidget_3);
+        label_12->setObjectName("label_12");
+
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, label_12);
+
+        txtFEmail = new QLineEdit(formLayoutWidget_3);
+        txtFEmail->setObjectName("txtFEmail");
+
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, txtFEmail);
+
+        txtFPhone = new QLineEdit(formLayoutWidget_3);
+        txtFPhone->setObjectName("txtFPhone");
+
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, txtFPhone);
+
+        btnPrev_2 = new QPushButton(page_4);
+        btnPrev_2->setObjectName("btnPrev_2");
+        btnPrev_2->setGeometry(QRect(270, 300, 83, 29));
+        btnNext = new QPushButton(page_4);
+        btnNext->setObjectName("btnNext");
+        btnNext->setGeometry(QRect(660, 310, 83, 29));
+        stackedWidget->addWidget(page_4);
         page_3 = new QWidget();
         page_3->setObjectName("page_3");
         label_10 = new QLabel(page_3);
@@ -209,28 +257,35 @@ public:
         QFont font2;
         font2.setPointSize(25);
         label_10->setFont(font2);
-        pushButton = new QPushButton(page_3);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(270, 290, 121, 71));
-        pushButton_2 = new QPushButton(page_3);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(30, 290, 121, 71));
-        pushButton_3 = new QPushButton(page_3);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(490, 290, 131, 71));
+        btnEnter = new QPushButton(page_3);
+        btnEnter->setObjectName("btnEnter");
+        btnEnter->setGeometry(QRect(250, 300, 121, 71));
+        btnEditexp = new QPushButton(page_3);
+        btnEditexp->setObjectName("btnEditexp");
+        btnEditexp->setGeometry(QRect(40, 300, 121, 71));
+        btnGraph = new QPushButton(page_3);
+        btnGraph->setObjectName("btnGraph");
+        btnGraph->setGeometry(QRect(660, 300, 131, 71));
+        btnStats = new QPushButton(page_3);
+        btnStats->setObjectName("btnStats");
+        btnStats->setGeometry(QRect(470, 310, 111, 61));
         stackedWidget->addWidget(page_3);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 1051, 25));
+        menuHome_Page = new QMenu(menubar);
+        menuHome_Page->setObjectName("menuHome_Page");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
+        menubar->addAction(menuHome_Page->menuAction());
+
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -254,10 +309,16 @@ public:
         label_8->setText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         btnPrev->setText(QCoreApplication::translate("MainWindow", "Previous", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "Email", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "Phone", nullptr));
+        btnPrev_2->setText(QCoreApplication::translate("MainWindow", "Prev", nullptr));
+        btnNext->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Welcome User", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Enter Expense", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Edit Expense", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Generate Graph", nullptr));
+        btnEnter->setText(QCoreApplication::translate("MainWindow", "Enter Expense", nullptr));
+        btnEditexp->setText(QCoreApplication::translate("MainWindow", "Edit Expense", nullptr));
+        btnGraph->setText(QCoreApplication::translate("MainWindow", "Generate Graph", nullptr));
+        btnStats->setText(QCoreApplication::translate("MainWindow", "Stats", nullptr));
+        menuHome_Page->setTitle(QCoreApplication::translate("MainWindow", "Home Page", nullptr));
     } // retranslateUi
 
 };

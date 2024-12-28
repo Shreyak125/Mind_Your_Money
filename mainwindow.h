@@ -28,6 +28,8 @@ private slots:
 
     void on_btnPrev_clicked();
 
+    void on_btnPrev_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
