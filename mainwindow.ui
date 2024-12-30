@@ -17,11 +17,16 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>10</x>
+      <y>10</y>
       <width>1021</width>
       <height>651</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
     </property>
     <property name="layoutDirection">
      <enum>Qt::LayoutDirection::LeftToRight</enum>
@@ -35,13 +40,13 @@
        <rect>
         <x>400</x>
         <y>10</y>
-        <width>271</width>
-        <height>111</height>
+        <width>341</width>
+        <height>101</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>25</pointsize>
        </font>
       </property>
       <property name="text">
@@ -54,7 +59,7 @@
         <x>260</x>
         <y>180</y>
         <width>531</width>
-        <height>81</height>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -62,7 +67,7 @@
         <widget class="QLabel" name="label_2">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>15</pointsize>
           </font>
          </property>
          <property name="text">
@@ -71,13 +76,19 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="txtEmail"/>
+        <widget class="QLineEdit" name="txtEmail">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>15</pointsize>
           </font>
          </property>
          <property name="text">
@@ -86,99 +97,80 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="txtPassword"/>
+        <widget class="QLineEdit" name="txtPassword">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="btnSignup">
+     <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>260</x>
         <y>290</y>
-        <width>121</width>
-        <height>31</height>
+        <width>521</width>
+        <height>44</height>
        </rect>
       </property>
-      <property name="text">
-       <string>SignUp</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnLogin">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>290</y>
-        <width>121</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Login</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnForgot">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>290</y>
-        <width>121</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>ForgotPassword</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btnSignup">
+         <property name="text">
+          <string>SignUp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnLogin">
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnForgot">
+         <property name="text">
+          <string>ForgotPassword</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
-     <widget class="QPushButton" name="btnSave1">
-      <property name="geometry">
-       <rect>
-        <x>710</x>
-        <y>430</y>
-        <width>83</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Save</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnReset">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>430</y>
-        <width>83</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Reset</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="formLayoutWidget_2">
       <property name="geometry">
        <rect>
         <x>200</x>
         <y>120</y>
         <width>671</width>
-        <height>231</height>
+        <height>283</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>First Name</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="txtFirstName"/>
-       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Middle Name</string>
          </property>
@@ -186,79 +178,146 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Last Name</string>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="txtLastName"/>
+        <widget class="QLineEdit" name="txtLastName">
+         <property name="placeholderText">
+          <string>EG: NEPAL</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Email Address</string>
          </property>
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="txtEmail_2"/>
+        <widget class="QLineEdit" name="txtEmail_2">
+         <property name="placeholderText">
+          <string>xyz@gmail.com</string>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Phone Number</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="txtPhone"/>
+        <widget class="QLineEdit" name="txtPhone">
+         <property name="placeholderText">
+          <string>98000000000</string>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Password</string>
          </property>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="txtPassword_2"/>
+        <widget class="QLineEdit" name="txtPassword_2">
+         <property name="placeholderText">
+          <string>CANT BE EMPTY</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="txtMiddle"/>
+        <widget class="QLineEdit" name="txtMiddle">
+         <property name="placeholderText">
+          <string>BAHADUR</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtFirstName">
+         <property name="placeholderText">
+          <string>EG: JOHN</string>
+         </property>
+        </widget>
        </item>
       </layout>
-     </widget>
-     <widget class="QPushButton" name="btnPrev">
-      <property name="geometry">
-       <rect>
-        <x>480</x>
-        <y>430</y>
-        <width>83</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Previous</string>
-      </property>
      </widget>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>30</y>
-        <width>191</width>
-        <height>61</height>
+        <x>420</x>
+        <y>0</y>
+        <width>241</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>25</pointsize>
        </font>
       </property>
       <property name="text">
        <string>SignUP Page</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>420</y>
+        <width>651</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="btnPrev">
+         <property name="text">
+          <string>Previous</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnReset">
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSave1">
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_4">
@@ -268,25 +327,32 @@
         <x>130</x>
         <y>140</y>
         <width>771</width>
-        <height>71</height>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_3">
        <item row="0" column="1">
         <widget class="QLineEdit" name="txtFEmail">
          <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
           <string>XYZ@gmail.com</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="txtFPhone"/>
+        <widget class="QLineEdit" name="txtFPhone">
+         <property name="placeholderText">
+          <string>9700000000</string>
+         </property>
+        </widget>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_11">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>15</pointsize>
           </font>
          </property>
          <property name="text">
@@ -298,7 +364,7 @@
         <widget class="QLabel" name="label_12">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>15</pointsize>
           </font>
          </property>
          <property name="text">
@@ -308,49 +374,49 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="btnPrev_2">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>310</y>
-        <width>83</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Prev</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnNext">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>310</y>
-        <width>83</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Next</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>10</y>
-        <width>241</width>
-        <height>71</height>
+        <width>321</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>25</pointsize>
        </font>
       </property>
       <property name="text">
        <string>Forgot Password</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>280</y>
+        <width>391</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="btnPrev_2">
+         <property name="text">
+          <string>Prev</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNext">
+         <property name="text">
+          <string>Next</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_3">
@@ -372,57 +438,57 @@
        <string>Welcome User</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnEnter">
+     <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>300</y>
-        <width>121</width>
-        <height>71</height>
+        <x>300</x>
+        <y>200</y>
+        <width>186</width>
+        <height>171</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Enter Expense</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="btnGraph">
+         <property name="text">
+          <string>Generate Graph</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnStats">
+         <property name="text">
+          <string>Stats</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QPushButton" name="btnEditexp">
+     <widget class="QWidget" name="verticalLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>300</y>
-        <width>121</width>
-        <height>71</height>
+        <x>30</x>
+        <y>200</y>
+        <width>171</width>
+        <height>171</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Edit Expense</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnGraph">
-      <property name="geometry">
-       <rect>
-        <x>660</x>
-        <y>300</y>
-        <width>131</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Generate Graph</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnStats">
-      <property name="geometry">
-       <rect>
-        <x>470</x>
-        <y>310</y>
-        <width>111</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Stats</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="btnEnter">
+         <property name="text">
+          <string>Enter Expense</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnEditexp">
+         <property name="text">
+          <string>Edit Expense</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>
