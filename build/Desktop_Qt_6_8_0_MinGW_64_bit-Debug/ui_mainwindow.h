@@ -126,7 +126,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(10, 10, 891, 651));
+        stackedWidget->setGeometry(QRect(20, 10, 911, 651));
         QFont font;
         font.setPointSize(20);
         stackedWidget->setFont(font);
@@ -329,7 +329,7 @@ public:
         label_13->setFont(font1);
         horizontalLayoutWidget_3 = new QWidget(page_4);
         horizontalLayoutWidget_3->setObjectName("horizontalLayoutWidget_3");
-        horizontalLayoutWidget_3->setGeometry(QRect(520, 290, 391, 61));
+        horizontalLayoutWidget_3->setGeometry(QRect(490, 260, 391, 61));
         horizontalLayout_3 = new QHBoxLayout(horizontalLayoutWidget_3);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -388,7 +388,7 @@ public:
         page_3->setObjectName("page_3");
         label_10 = new QLabel(page_3);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(300, -10, 271, 121));
+        label_10->setGeometry(QRect(230, -10, 271, 121));
         label_10->setFont(font1);
         verticalLayoutWidget_2 = new QWidget(page_3);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
@@ -517,7 +517,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

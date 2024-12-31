@@ -72,7 +72,37 @@ void MainWindow::updateDateTime()
 
 void MainWindow::on_btnLogin_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+
+
+    QString Email = ui->txtEmail->text();
+    QString Password= ui->txtPassword->text();
+
+    if (Email.isEmpty() || Password.isEmpty()) {
+        QMessageBox::warning(this, "Login Error", "Please enter both Email and Password.");
+        return;
+    }
+
+    // Query to check the credentials
+    QSqlQuery query;
+    query.prepare("SELECT * FROM User WHERE Email = :Email AND Password= :Password");
+    query.bindValue(":Email", Email);
+    query.bindValue(":Password", Password);
+
+    if (!query.exec()) {
+        QMessageBox::critical(this, "Database Error", "Failed to execute query: " + query.lastError().text());
+        return;
+    }
+
+    if (query.next()) {
+        // Login successful
+        QMessageBox::information(this, "Login Successful", "Welcome, " + Email + "!");
+        ui->stackedWidget->setCurrentIndex(4); // Navigate to the next page
+    } else {
+        // Login failed
+        QMessageBox::warning(this, "Login Failed", "Invalid Email or Password.");
+    }
+
+    //ui->stackedWidget->setCurrentIndex(4);
 }
 
 

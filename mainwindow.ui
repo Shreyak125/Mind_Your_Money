@@ -17,9 +17,9 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>10</y>
-      <width>891</width>
+      <width>911</width>
       <height>651</height>
      </rect>
     </property>
@@ -32,7 +32,7 @@
      <enum>Qt::LayoutDirection::LeftToRight</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -395,8 +395,8 @@
      <widget class="QWidget" name="horizontalLayoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>290</y>
+        <x>490</x>
+        <y>260</y>
         <width>391</width>
         <height>61</height>
        </rect>
@@ -506,7 +506,7 @@
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>230</x>
         <y>-10</y>
         <width>271</width>
         <height>121</height>
