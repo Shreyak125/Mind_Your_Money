@@ -54,11 +54,11 @@ public:
     QLabel *label_6;
     QLineEdit *txtLastName;
     QLabel *label_7;
-    QLineEdit *txtEmail_2;
+    QLineEdit *txtEmailA;
     QLabel *label_8;
     QLineEdit *txtPhone;
     QLabel *label_9;
-    QLineEdit *txtPassword_2;
+    QLineEdit *txtPasswords;
     QLineEdit *txtMiddle;
     QLineEdit *txtFirstName;
     QLabel *label_14;
@@ -121,12 +121,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1051, 707);
+        MainWindow->resize(945, 707);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(20, 0, 1021, 651));
+        stackedWidget->setGeometry(QRect(10, 10, 891, 651));
         QFont font;
         font.setPointSize(20);
         stackedWidget->setFont(font);
@@ -141,7 +141,7 @@ public:
         label->setFont(font1);
         formLayoutWidget = new QWidget(page);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(260, 180, 531, 91));
+        formLayoutWidget->setGeometry(QRect(260, 170, 531, 91));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -230,10 +230,10 @@ public:
 
         formLayout_2->setWidget(3, QFormLayout::LabelRole, label_7);
 
-        txtEmail_2 = new QLineEdit(formLayoutWidget_2);
-        txtEmail_2->setObjectName("txtEmail_2");
+        txtEmailA = new QLineEdit(formLayoutWidget_2);
+        txtEmailA->setObjectName("txtEmailA");
 
-        formLayout_2->setWidget(3, QFormLayout::FieldRole, txtEmail_2);
+        formLayout_2->setWidget(3, QFormLayout::FieldRole, txtEmailA);
 
         label_8 = new QLabel(formLayoutWidget_2);
         label_8->setObjectName("label_8");
@@ -252,10 +252,10 @@ public:
 
         formLayout_2->setWidget(5, QFormLayout::LabelRole, label_9);
 
-        txtPassword_2 = new QLineEdit(formLayoutWidget_2);
-        txtPassword_2->setObjectName("txtPassword_2");
+        txtPasswords = new QLineEdit(formLayoutWidget_2);
+        txtPasswords->setObjectName("txtPasswords");
 
-        formLayout_2->setWidget(5, QFormLayout::FieldRole, txtPassword_2);
+        formLayout_2->setWidget(5, QFormLayout::FieldRole, txtPasswords);
 
         txtMiddle = new QLineEdit(formLayoutWidget_2);
         txtMiddle->setObjectName("txtMiddle");
@@ -392,7 +392,7 @@ public:
         label_10->setFont(font1);
         verticalLayoutWidget_2 = new QWidget(page_3);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 130, 241, 431));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 140, 241, 421));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(50);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -419,7 +419,7 @@ public:
 
         horizontalLayoutWidget_4 = new QWidget(page_3);
         horizontalLayoutWidget_4->setObjectName("horizontalLayoutWidget_4");
-        horizontalLayoutWidget_4->setGeometry(QRect(670, 40, 321, 51));
+        horizontalLayoutWidget_4->setGeometry(QRect(540, 40, 321, 51));
         horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_4);
         horizontalLayout_4->setSpacing(0);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
@@ -505,7 +505,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1051, 25));
+        menubar->setGeometry(QRect(0, 0, 945, 25));
         menuHome_Page = new QMenu(menubar);
         menuHome_Page->setObjectName("menuHome_Page");
         MainWindow->setMenuBar(menubar);
@@ -517,7 +517,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -537,11 +537,11 @@ public:
         label_6->setText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
         txtLastName->setPlaceholderText(QCoreApplication::translate("MainWindow", "EG: NEPAL", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Email Address", nullptr));
-        txtEmail_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "xyz@gmail.com", nullptr));
+        txtEmailA->setPlaceholderText(QCoreApplication::translate("MainWindow", "xyz@gmail.com", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
         txtPhone->setPlaceholderText(QCoreApplication::translate("MainWindow", "98000000000", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
-        txtPassword_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "CANT BE EMPTY", nullptr));
+        txtPasswords->setPlaceholderText(QCoreApplication::translate("MainWindow", "CANT BE EMPTY", nullptr));
         txtMiddle->setPlaceholderText(QCoreApplication::translate("MainWindow", "BAHADUR", nullptr));
         txtFirstName->setPlaceholderText(QCoreApplication::translate("MainWindow", "EG: JOHN", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "SignUP Page", nullptr));

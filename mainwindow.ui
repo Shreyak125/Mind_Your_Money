@@ -32,7 +32,7 @@
      <enum>Qt::LayoutDirection::LeftToRight</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -59,7 +59,7 @@
         <x>260</x>
         <y>170</y>
         <width>531</width>
-        <height>81</height>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -208,7 +208,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="txtEmail_2">
+        <widget class="QLineEdit" name="txtEmailA">
          <property name="placeholderText">
           <string>xyz@gmail.com</string>
          </property>
@@ -246,7 +246,7 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="txtPassword_2">
+        <widget class="QLineEdit" name="txtPasswords">
          <property name="placeholderText">
           <string>CANT BE EMPTY</string>
          </property>
@@ -739,7 +739,7 @@ color:red;
      <x>0</x>
      <y>0</y>
      <width>945</width>
-     <height>33</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHome_Page">

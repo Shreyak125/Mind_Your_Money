@@ -106,9 +106,9 @@ void MainWindow::on_btnSave1_clicked()
     QString FirstName=ui->txtFirstName->text();
     QString MiddleName=ui->txtMiddle->text();
     QString LastName=ui->txtLastName->text();
-    QString Email=ui->txtEmail->text();
+    QString Email=ui->txtEmailA->text();
     QString Phone=ui->txtPhone->text();
-    QString Password=ui->txtPassword->text();
+    QString Password=ui->txtPasswords->text();
 
     QSqlQuery qry;
 
