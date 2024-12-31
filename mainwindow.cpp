@@ -44,6 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
     //connect(ui->btnSave1, &QPushButton::clicked, this, &MainWindow::on_btnSave1_clicked);
     connect(ui->btnEPrev, &QPushButton::clicked, this, &MainWindow::on_btnEPrev_clicked);
     connect(ui->btnEnter, &QPushButton::clicked, this, &MainWindow::on_btnEnter_clicked);
+     connect(ui->btnHome, &QPushButton::clicked, this, &MainWindow::on_btnHome_clicked);
+    connect(ui->btnNext, &QPushButton::clicked, this, &MainWindow::on_btnNext_clicked);
 
 
     //Database initialize
@@ -70,7 +72,7 @@ void MainWindow::updateDateTime()
 
 void MainWindow::on_btnLogin_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 
@@ -139,12 +141,24 @@ void MainWindow::on_btnSave1_clicked()
 
 void MainWindow::on_btnEPrev_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 
 void MainWindow::on_btnEnter_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void MainWindow::on_btnHome_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_btnNext_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
 }
 

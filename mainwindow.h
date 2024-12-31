@@ -40,6 +40,10 @@ private slots:
 
     void on_btnEnter_clicked();
 
+    void on_btnHome_clicked();
+
+    void on_btnNext_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

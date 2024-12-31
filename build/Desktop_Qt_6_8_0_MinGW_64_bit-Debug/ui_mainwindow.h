@@ -64,9 +64,9 @@ public:
     QLabel *label_14;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *btnPrev;
     QPushButton *btnReset;
     QPushButton *btnSave1;
+    QPushButton *btnPrev;
     QWidget *page_4;
     QWidget *formLayoutWidget_3;
     QFormLayout *formLayout_3;
@@ -79,6 +79,16 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QPushButton *btnPrev_2;
     QPushButton *btnNext;
+    QWidget *page_6;
+    QWidget *formLayoutWidget_5;
+    QFormLayout *formLayout_5;
+    QLabel *label_20;
+    QLabel *label_21;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
+    QLabel *label_19;
+    QPushButton *btnFChange;
+    QPushButton *btnHome;
     QWidget *page_3;
     QLabel *label_10;
     QWidget *verticalLayoutWidget_2;
@@ -116,7 +126,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(10, 10, 1021, 651));
+        stackedWidget->setGeometry(QRect(20, 0, 1021, 651));
         QFont font;
         font.setPointSize(20);
         stackedWidget->setFont(font);
@@ -263,15 +273,10 @@ public:
         label_14->setFont(font1);
         horizontalLayoutWidget_2 = new QWidget(page_2);
         horizontalLayoutWidget_2->setObjectName("horizontalLayoutWidget_2");
-        horizontalLayoutWidget_2->setGeometry(QRect(200, 420, 651, 55));
+        horizontalLayoutWidget_2->setGeometry(QRect(200, 470, 661, 55));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        btnPrev = new QPushButton(horizontalLayoutWidget_2);
-        btnPrev->setObjectName("btnPrev");
-
-        horizontalLayout_2->addWidget(btnPrev);
-
         btnReset = new QPushButton(horizontalLayoutWidget_2);
         btnReset->setObjectName("btnReset");
 
@@ -281,6 +286,11 @@ public:
         btnSave1->setObjectName("btnSave1");
 
         horizontalLayout_2->addWidget(btnSave1);
+
+        btnPrev = new QPushButton(horizontalLayoutWidget_2);
+        btnPrev->setObjectName("btnPrev");
+
+        horizontalLayout_2->addWidget(btnPrev);
 
         stackedWidget->addWidget(page_2);
         page_4 = new QWidget();
@@ -319,7 +329,7 @@ public:
         label_13->setFont(font1);
         horizontalLayoutWidget_3 = new QWidget(page_4);
         horizontalLayoutWidget_3->setObjectName("horizontalLayoutWidget_3");
-        horizontalLayoutWidget_3->setGeometry(QRect(520, 280, 391, 80));
+        horizontalLayoutWidget_3->setGeometry(QRect(520, 290, 391, 61));
         horizontalLayout_3 = new QHBoxLayout(horizontalLayoutWidget_3);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -334,6 +344,46 @@ public:
         horizontalLayout_3->addWidget(btnNext);
 
         stackedWidget->addWidget(page_4);
+        page_6 = new QWidget();
+        page_6->setObjectName("page_6");
+        formLayoutWidget_5 = new QWidget(page_6);
+        formLayoutWidget_5->setObjectName("formLayoutWidget_5");
+        formLayoutWidget_5->setGeometry(QRect(190, 160, 611, 121));
+        formLayout_5 = new QFormLayout(formLayoutWidget_5);
+        formLayout_5->setObjectName("formLayout_5");
+        formLayout_5->setContentsMargins(0, 0, 0, 0);
+        label_20 = new QLabel(formLayoutWidget_5);
+        label_20->setObjectName("label_20");
+
+        formLayout_5->setWidget(0, QFormLayout::LabelRole, label_20);
+
+        label_21 = new QLabel(formLayoutWidget_5);
+        label_21->setObjectName("label_21");
+
+        formLayout_5->setWidget(1, QFormLayout::LabelRole, label_21);
+
+        lineEdit_2 = new QLineEdit(formLayoutWidget_5);
+        lineEdit_2->setObjectName("lineEdit_2");
+
+        formLayout_5->setWidget(0, QFormLayout::FieldRole, lineEdit_2);
+
+        lineEdit_3 = new QLineEdit(formLayoutWidget_5);
+        lineEdit_3->setObjectName("lineEdit_3");
+
+        formLayout_5->setWidget(1, QFormLayout::FieldRole, lineEdit_3);
+
+        label_19 = new QLabel(page_6);
+        label_19->setObjectName("label_19");
+        label_19->setGeometry(QRect(400, 30, 271, 61));
+        btnFChange = new QPushButton(page_6);
+        btnFChange->setObjectName("btnFChange");
+        btnFChange->setGeometry(QRect(700, 310, 83, 29));
+        btnFChange->setFont(font2);
+        btnHome = new QPushButton(page_6);
+        btnHome->setObjectName("btnHome");
+        btnHome->setGeometry(QRect(592, 310, 81, 31));
+        btnHome->setFont(font2);
+        stackedWidget->addWidget(page_6);
         page_3 = new QWidget();
         page_3->setObjectName("page_3");
         label_10 = new QLabel(page_3);
@@ -467,7 +517,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -495,9 +545,9 @@ public:
         txtMiddle->setPlaceholderText(QCoreApplication::translate("MainWindow", "BAHADUR", nullptr));
         txtFirstName->setPlaceholderText(QCoreApplication::translate("MainWindow", "EG: JOHN", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "SignUP Page", nullptr));
-        btnPrev->setText(QCoreApplication::translate("MainWindow", "Previous", nullptr));
         btnReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         btnSave1->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        btnPrev->setText(QCoreApplication::translate("MainWindow", "Previous", nullptr));
         txtFEmail->setText(QString());
         txtFEmail->setPlaceholderText(QCoreApplication::translate("MainWindow", "XYZ@gmail.com", nullptr));
         txtFPhone->setPlaceholderText(QCoreApplication::translate("MainWindow", "9700000000", nullptr));
@@ -506,6 +556,11 @@ public:
         label_13->setText(QCoreApplication::translate("MainWindow", "Forgot Password", nullptr));
         btnPrev_2->setText(QCoreApplication::translate("MainWindow", "Prev", nullptr));
         btnNext->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "New Password", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "Confirm Password", nullptr));
+        label_19->setText(QCoreApplication::translate("MainWindow", "Change Password", nullptr));
+        btnFChange->setText(QCoreApplication::translate("MainWindow", "Change", nullptr));
+        btnHome->setText(QCoreApplication::translate("MainWindow", "Home", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Welcome User", nullptr));
         btnEnter->setText(QCoreApplication::translate("MainWindow", "Enter Expense", nullptr));
         btnGraph->setText(QCoreApplication::translate("MainWindow", "Generate Graph", nullptr));
