@@ -33,6 +33,13 @@ private slots:
 
     void on_btnSave1_clicked();
 
+
+private slots:
+    void updateDateTime();
+    void on_btnEPrev_clicked();
+
+    void on_btnEnter_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

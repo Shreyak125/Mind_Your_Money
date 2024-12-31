@@ -7,6 +7,8 @@
 #include <QSqlError>
 #include <QUuid>
 #include<QMessageBox>
+#include <QDateTime>
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,13 +19,31 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     ui->setupUi(this);
+
+
+
+    // Create a QTimer to update the date and time
+    QTimer *timer = new QTimer(this);
+
+    // Connect the timer's timeout signal to the updateDateTime slot
+    connect(timer, &QTimer::timeout, this, &MainWindow::updateDateTime);
+
+    // Start the timer with an interval of 1 second
+    timer->start(1000);
+
+    // Set the initial date and time
+    updateDateTime();
+
+
+    //COnnecting buttons
     connect(ui->btnLogin, &QPushButton::clicked, this, &MainWindow::on_btnLogin_clicked);
     connect(ui->btnSignup, &QPushButton::clicked, this, &MainWindow::on_btnSignup_clicked);
     connect(ui->btnForgot, &QPushButton::clicked, this, &MainWindow::on_btnForgot_clicked);
     connect(ui->btnPrev, &QPushButton::clicked, this, &MainWindow::on_btnPrev_clicked);
     connect(ui->btnPrev_2, &QPushButton::clicked, this, &MainWindow::on_btnPrev_2_clicked);
     //connect(ui->btnSave1, &QPushButton::clicked, this, &MainWindow::on_btnSave1_clicked);
-
+    connect(ui->btnEPrev, &QPushButton::clicked, this, &MainWindow::on_btnEPrev_clicked);
+    connect(ui->btnEnter, &QPushButton::clicked, this, &MainWindow::on_btnEnter_clicked);
 
 
     //Database initialize
@@ -38,6 +58,14 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+void MainWindow::updateDateTime()
+{
+    // Get the current date and time
+    QString currentDateTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
+
+    // Display it in the QLabel (assuming QLabel is named lblDateTime in your UI)
+    ui->lblDateTime->setText(currentDateTime);
 }
 
 void MainWindow::on_btnLogin_clicked()
@@ -106,5 +134,17 @@ void MainWindow::on_btnSave1_clicked()
 
     // Close the database connection
 
+}
+
+
+void MainWindow::on_btnEPrev_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_btnEnter_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
 }
 

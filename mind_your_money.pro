@@ -3,6 +3,9 @@ QT += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+TARGET = DateTimeApp
+TEMPLATE = app
+
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
