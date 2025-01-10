@@ -13,6 +13,9 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+private:
+    int loggedInUserID;  // Store the logged-in user's ID
+
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -43,6 +46,14 @@ private slots:
     void on_btnHome_clicked();
 
     void on_btnNext_clicked();
+
+    void on_btnReset_clicked();
+
+    void on_btnEnterExpense_clicked();
+
+    void on_btnSaveExpense_clicked();
+
+    void on_btnPrev_3_clicked();
 
 private:
     Ui::MainWindow *ui;

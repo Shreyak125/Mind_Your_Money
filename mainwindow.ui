@@ -17,8 +17,8 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>0</x>
+      <y>0</y>
       <width>911</width>
       <height>651</height>
      </rect>
@@ -32,7 +32,7 @@
      <enum>Qt::LayoutDirection::LeftToRight</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -148,7 +148,7 @@
         <x>200</x>
         <y>120</y>
         <width>671</width>
-        <height>349</height>
+        <height>401</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
@@ -164,6 +164,13 @@
          </property>
         </widget>
        </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtFirstName">
+         <property name="placeholderText">
+          <string>EG: JOHN</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_5">
          <property name="font">
@@ -173,6 +180,13 @@
          </property>
          <property name="text">
           <string>Middle Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="txtMiddle">
+         <property name="placeholderText">
+          <string>BAHADUR</string>
          </property>
         </widget>
        </item>
@@ -252,17 +266,22 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="txtMiddle">
-         <property name="placeholderText">
-          <string>BAHADUR</string>
+       <item row="6" column="0">
+        <widget class="QLabel" name="MonthlyBudget">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Monthly_Budget</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="txtFirstName">
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="txtMonthlyBudget">
          <property name="placeholderText">
-          <string>EG: JOHN</string>
+          <string>CANT BE EMPTY</string>
          </property>
         </widget>
        </item>
@@ -286,38 +305,55 @@
        <string>SignUP Page</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnReset">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>530</y>
+        <width>215</width>
+        <height>53</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSave1">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>530</y>
+        <width>261</width>
+        <height>53</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnPrev">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>530</y>
+        <width>201</width>
+        <height>53</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Previous</string>
+      </property>
+     </widget>
      <widget class="QWidget" name="horizontalLayoutWidget_2">
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>470</y>
-        <width>661</width>
-        <height>55</height>
+        <y>530</y>
+        <width>671</width>
+        <height>51</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="btnReset">
-         <property name="text">
-          <string>Reset</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnSave1">
-         <property name="text">
-          <string>Save</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnPrev">
-         <property name="text">
-          <string>Previous</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
      </widget>
     </widget>
     <widget class="QWidget" name="page_4">
@@ -535,7 +571,7 @@
         <number>50</number>
        </property>
        <item>
-        <widget class="QPushButton" name="btnEnter">
+        <widget class="QPushButton" name="btnEnterExpense">
          <property name="text">
           <string>Enter Expense</string>
          </property>
@@ -671,7 +707,7 @@ color:red;
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox_2">
+        <widget class="QComboBox" name="ExpenseName">
          <property name="placeholderText">
           <string>Expense</string>
          </property>
@@ -682,18 +718,23 @@ color:red;
          </item>
          <item>
           <property name="text">
+           <string>Rent</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Stationary</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Others</string>
+           <string>Utensils</string>
           </property>
          </item>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="LineEditAmount">
          <property name="placeholderText">
           <string>RS.</string>
          </property>
@@ -715,14 +756,14 @@ color:red;
         <number>100</number>
        </property>
        <item>
-        <widget class="QPushButton" name="btnEPrev">
+        <widget class="QPushButton" name="btnPrev_3">
          <property name="text">
           <string>Prev</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btnESave">
+        <widget class="QPushButton" name="btnSaveExpense">
          <property name="text">
           <string>Save</string>
          </property>
@@ -739,7 +780,7 @@ color:red;
      <x>0</x>
      <y>0</y>
      <width>945</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHome_Page">
